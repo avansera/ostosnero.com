@@ -1,0 +1,25 @@
+
+.wrapper {
+	max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 0.5em;
+}
+
+.full-width {
+	float: left;
+	width: 100%;
+}
+
+.padded {
+	padding: 32px 0;
+
+	&.padded-fat {
+		padding: 128px 0;
+	}
+}
+
+@media screen and (min-width: 700px) {
+	.wrapper {
+		padding: 0 1em;
+	}
+}
