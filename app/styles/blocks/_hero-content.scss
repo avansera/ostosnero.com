@@ -23,7 +23,8 @@
 .hero_Content-Message {
 	@include text-shadow();
 
-
+	font-weight: 600;
+	opacity: 0.75;
 	&:first-letter {
 		text-transform: uppercase;
 	}

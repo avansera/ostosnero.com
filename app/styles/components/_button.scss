@@ -4,6 +4,7 @@
 	padding: 0 1em;
 
 	background: $muted;
+	border: none;
 
 	line-height: 40px;
 	color: $white;
@@ -12,6 +13,16 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+	-webkit-transition: 0.25s all ease-out;
+	-moz-transition: 0.25s all ease-out;
+	-ms-transition: 0.25s all ease-out;
+	-o-transition: 0.25s all ease-out;
+	transition: 0.25s all ease-out;
 
 	& + .btn {
 		margin: 1em 0 0;
@@ -23,10 +34,24 @@
 
 	&.btn-green {
 		background: $green;
+		&:hover {
+			background: lighten($green, 5%);
+		}
 	}
 
 	&.btn-t-white {
 		background: rgba($white, 0.25);
+		&:hover {
+			@include text-shadow();
+			background: rgba($white, 0.5);
+		}
+	}
+
+	&.btn-black {
+		background: $black;
+		&:hover {
+			background: lighten($black, 5%);
+		}
 	}
 }
 
