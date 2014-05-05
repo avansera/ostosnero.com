@@ -4,7 +4,7 @@
   "dependencies": {
     "jquery": "~1.11.0",
     "flexboxgrid": "~3.0.1",
-    "normalize-css": "~3.0.1"
+    "normalize-scss": "~3.0.1"
   },
   "devDependencies": {}
 }
