@@ -1,12 +1,16 @@
 .hero_SiteHead {
+	background-image: url('/images/headerlogo.png');
+}
+.hero_SiteHead {
 	text-indent: -10001px;
 
 	width: 64px;
 	margin: 0 auto;
 	background: {
-		image: url('/images/headerlogo.png');
+		image: url('/images/headerlogo.svg');
 		position: 0 0;
 		repeat: no-repeat;
+		size: 100% auto;
 	}
 	opacity: 0.5;
 }
