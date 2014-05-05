@@ -1,0 +1,75 @@
+.phone-graphic-wrapper {
+	text-align: center;
+}
+
+.phone {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 8em;
+	height: 568px;
+	margin: (568px / 2)*-1 0 0;
+
+	&.phone-static {
+		display: inline-block;
+		position: relative;
+		top: auto;
+		left: auto;
+		height: auto;
+		width: 240px;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.phone {
+		left: 2em;
+	}
+}
+
+@media screen and (min-width: ($mobileBreak - 1px)) {
+	.phone {
+		display: block;
+		&.phone-static {
+			display: none;
+		}
+	}
+}
+
+.phone_Screen {
+	max-width: 100%;
+}
+
+@media screen and (min-width: $mobileBreak) {
+	.phone_Screen {
+		max-width: none;
+		max-height: 100%;
+	}
+}
+
+
+[class^='phone_Screen-'] {
+	position: absolute;
+	width: 209px;
+	top: 68px;
+	left: 17px;
+	border: 1px solid rgba(#000000, 0.25);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@media screen and (min-width: ($mobileBreak - 1px)) {
+
+	[class^='phone_Screen-'] {
+		position: absolute;
+		width: auto;
+		height: 415px;
+		top: 76px;
+		left: 20px;
+		border: 1px solid rgba(#000000, 0.25);
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+}

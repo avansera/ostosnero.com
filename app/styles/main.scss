@@ -5,6 +5,7 @@
 @import "structure";
 @import "typography";
 @import "mixins";
+@import "helpers";
 
 // atoms
 
@@ -17,7 +18,10 @@
 
 @import "blocks/hero-content";
 @import "blocks/hero-graphic";
+@import "blocks/phone";
+
 
 // sections
 
 @import "sections/hero";
+@import "sections/section";
