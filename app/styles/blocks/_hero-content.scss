@@ -2,6 +2,8 @@
 
 
 .hero_Content {
+	position: relative;
+	z-index: 3001;
 	margin-top: 32px;
 	text-align: center;
 }
@@ -18,6 +20,7 @@
 	margin: 0;
 	font-size: 2.5em;
 	font-weight: 300;
+	line-height: 1.15;
 }
 
 .hero_Content-Message {
