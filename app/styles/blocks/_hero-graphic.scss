@@ -1,0 +1,33 @@
+@media screen and (min-width: $mobileBreak) {
+
+	.hero_Graphic {
+		position: absolute;
+		left: 10%;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		max-width: 700px;
+		max-height: 700px;
+		overflow: hidden;
+		background: {
+			image: url('/images/herographic.png');
+			position: left bottom;
+			repeat: no-repeat;
+			size: contain;
+
+		}
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.hero_Graphic {
+		max-width: 900px;
+		max-height: 900px;
+	}
+}
+
+@media screen and (max-height: $mobileBreak) {
+	.hero_Graphic {
+		max-height: 660px;
+	}
+}
