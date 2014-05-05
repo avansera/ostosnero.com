@@ -93,7 +93,10 @@
         <!-- endbuild -->
 
 		<script type="text/javascript">
-			$('#hero, .section').height(window.innerHeight);
+			$('#hero').height(window.innerHeight);
+			if(window.innerWidth > 768) {
+				$('.section').height(window.innerHeight);
+			}
 		</script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
