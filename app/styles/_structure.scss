@@ -9,17 +9,37 @@
 .full-width {
 	float: left;
 	width: 100%;
+
+	&.odd {
+		background: darken($white, 2%);
+		border-top: 1px solid darken($white, 5%);
+		border-bottom: 1px solid darken($white, 5%);
+	}
+
+	&.green {
+		background: $green;
+		color: $white;
+	}
 }
 
-.padded {
-	padding: 32px 0;
+.above {
+	position: relative;
+	z-index: 3000;
+}
 
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	
-	&.padded-fat {
-		padding: 128px 0;
+
+@media screen and (max-width: $mobileBreak) {
+
+	.padded {
+		padding: 64px 0;
+
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+
+		&.padded-fat {
+			padding: 128px 0;
+		}
 	}
 }
 
