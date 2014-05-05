@@ -1,5 +1,6 @@
 .btn {
 	display: inline-block;
+	width: 100%;
 	padding: 0 1em;
 
 	background: $muted;
@@ -8,8 +9,12 @@
 	color: $white;
 	text-decoration: none;
 
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
 	& + .btn {
-		margin: 0 0 0 2em;
+		margin: 1em 0 0;
 	}
 
 	&.btn-pill {
@@ -22,5 +27,14 @@
 
 	&.btn-t-white {
 		background: rgba($white, 0.25);
+	}
+}
+
+@media screen and (min-width: $mobileBreak) {
+	.btn {
+		width: auto;
+		& + .btn {
+			margin: 0 0 0 1em;
+		}
 	}
 }

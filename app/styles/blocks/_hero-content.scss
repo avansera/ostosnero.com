@@ -31,7 +31,12 @@
 
 .hero_Content-Actions {
 	margin: 32px 0 0;
-	padding: 0 0 0 1em;
+}
+
+@media screen and (min-width: $mobileBreak) {
+	.hero_Content-Actions {
+		padding: 0 0 0 1em;
+	}
 }
 
 
