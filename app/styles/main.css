@@ -8,7 +8,10 @@
   width: 100%; }
 
 .padded {
-  padding: 32px 0; }
+  padding: 32px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
   .padded.padded-fat {
     padding: 128px 0; }
 
@@ -22,8 +25,62 @@ body {
   font: 400 1.6rem/1.5 'Source Sans Pro';
   color: #4f4f4f; }
 
+.btn {
+  display: inline-block;
+  padding: 0 1em;
+  background: #999999;
+  line-height: 40px;
+  color: white;
+  text-decoration: none; }
+  .btn + .btn {
+    margin: 0 0 0 2em; }
+  .btn.btn-pill {
+    border-radius: 20px; }
+  .btn.btn-green {
+    background: #00a253; }
+  .btn.btn-t-white {
+    background: rgba(255, 255, 255, 0.25); }
+
+.hero_SiteHead {
+  text-indent: -10001px;
+  width: 64px;
+  margin: 0 auto;
+  background-image: url("/images/headerlogo.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  opacity: 0.5; }
+
+.hero_Content {
+  margin-top: 32px;
+  text-align: center; }
+
+@media screen and (min-width: 768px) {
+  .hero_Content {
+    margin-top: 128px;
+    text-align: left; } }
+.hero_Content-Title {
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: 300; }
+
+.hero_Content-Message {
+  font-weight: 600;
+  text-shadow: 0 1px 0 #4f4f4f;
+  opacity: 0.75; }
+  .hero_Content-Message:first-letter {
+    text-transform: uppercase; }
+
+.hero_Content-Actions {
+  margin: 32px 0 0;
+  padding: 0 0 0 1em; }
+
 .hero {
+  padding: 32px 0;
   background-image: url("/images/herobg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top left; }
+  background-position: top left;
+  color: white;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }

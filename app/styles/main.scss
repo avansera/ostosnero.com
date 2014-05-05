@@ -4,12 +4,18 @@
 @import "variables";
 @import "structure";
 @import "typography";
+@import "mixins";
 
 // atoms
 
 // components
 
+@import "components/button";
+@import "components/hero-site-head";
+
 // blocks
+
+@import "blocks/hero-content";
 
 // sections
 
