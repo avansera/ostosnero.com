@@ -139,6 +139,27 @@
 			$('#hero').height(window.innerHeight);
 			if(window.innerWidth > 768) {
 				$('.section').height(window.innerHeight);
+				$(window).scroll(function() {
+					var scrollTop = window.scrollY;
+					var elem01Top = Math.abs(document.getElementById('section01').getBoundingClientRect().top);
+					var elem02Top = Math.abs(document.getElementById('section02').getBoundingClientRect().top);
+					var elem03Top = Math.abs(document.getElementById('section03').getBoundingClientRect().top);
+
+					if(elem01Top < 500) {
+						$('#screen01').addClass('current');
+						$('#screen02').removeClass('current');
+						$('#screen03').removeClass('current');
+					} else if(elem02Top < 500) {
+						$('#screen02').addClass('current');
+						$('#screen01').removeClass('current');
+						$('#screen03').removeClass('current');
+					} else if(elem03Top < 500) {
+						$('#screen03').addClass('current');
+						$('#screen01').removeClass('current');
+						$('#screen02').removeClass('current');
+					}
+
+				});
 			}
 
 			$(function() {
@@ -156,27 +177,7 @@
 				});
 			});
 
-			$(window).scroll(function() {
-				var scrollTop = window.scrollY;
-				var elem01Top = Math.abs(document.getElementById('section01').getBoundingClientRect().top);
-				var elem02Top = Math.abs(document.getElementById('section02').getBoundingClientRect().top);
-				var elem03Top = Math.abs(document.getElementById('section03').getBoundingClientRect().top);
 
-				if(elem01Top < 500) {
-					$('#screen01').addClass('current');
-					$('#screen02').removeClass('current');
-					$('#screen03').removeClass('current');
-				} else if(elem02Top < 500) {
-					$('#screen02').addClass('current');
-					$('#screen01').removeClass('current');
-					$('#screen03').removeClass('current');
-				} else if(elem03Top < 500) {
-					$('#screen03').addClass('current');
-					$('#screen01').removeClass('current');
-					$('#screen02').removeClass('current');
-				}
-
-			});
 
 		</script>
 
