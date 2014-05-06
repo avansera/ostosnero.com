@@ -40,12 +40,12 @@
 			</div>
 			<div class="hero_Graphic"></div>
 		</section>
-		<section class="full-width padded">
+		<section id="section01" class="full-width padded">
 			<div class="row wrapper section">
 				<div class="column-5-lap column-12-hand phone-graphic-wrapper">
 					<div class="phone phone-static only-mobile-inline">
-						<img class="phone_Screen" src="images/iphonegraphic.png" alt=""/>
-						<img class="phone_Screen-01" src="http://placehold.it/320x568" alt=""/>
+						<img class="phone_Body" src="images/iphonegraphic.png" alt=""/>
+						<img class="phone_Screen" src="images/phone-screen-dummy-01.png" alt=""/>
 					</div>
 				</div>
 				<div class="column-12-hand column-7-lap section_Content">
@@ -59,12 +59,12 @@
 				</div>
 			</div>
 		</section>
-		<section class="full-width padded odd">
+		<section id="section02" class="full-width padded odd">
 			<div class="row wrapper section">
 				<div class="column-5-lap column-12-hand phone-graphic-wrapper">
 					<div class="phone phone-static">
-						<img class="phone_Screen" src="images/iphonegraphic.png" alt=""/>
-						<img class="phone_Screen-01" src="http://placehold.it/320x568" alt=""/>
+						<img class="phone_Body" src="images/iphonegraphic.png" alt=""/>
+						<img class="phone_Screen" src="images/phone-screen-dummy-02.png" alt=""/>
 					</div>
 				</div>
 				<div class="column-12-hand column-7-lap section_Content">
@@ -78,12 +78,12 @@
 				</div>
 			</div>
 		</section>
-		<section class="full-width padded">
+		<section id="section03" class="full-width padded">
 			<div class="row wrapper section">
 				<div class="column-5-lap column-12-hand phone-graphic-wrapper">
 					<div class="phone phone-static only-mobile-inline">
-						<img class="phone_Screen" src="images/iphonegraphic.png" alt=""/>
-						<img class="phone_Screen-01" src="http://placehold.it/320x568" alt=""/>
+						<img class="phone_Body" src="images/iphonegraphic.png" alt=""/>
+						<img class="phone_Screen" src="images/phone-screen-dummy-03.png" alt=""/>
 					</div>
 				</div>
 				<div class="column-12-hand column-7-lap section_Content">
@@ -98,8 +98,10 @@
 			</div>
 		</section>
 		<div class="phone">
-			<img class="phone_Screen" src="images/iphonegraphic.png" alt=""/>
-			<img class="phone_Screen-01" src="http://placehold.it/320x568" alt=""/>
+			<img class="phone_Body" src="images/iphonegraphic.png" alt=""/>
+			<img id="screen01" class="phone_Screen current" src="images/phone-screen-dummy-01.png" alt=""/>
+			<img id="screen02" class="phone_Screen" src="images/phone-screen-dummy-02.png" alt=""/>
+			<img id="screen03" class="phone_Screen" src="images/phone-screen-dummy-03.png" alt=""/>
 		</div>
 
 		<section class="full-width padded green above contact">
@@ -118,6 +120,11 @@
 				</div>
 			</div>
 		</section>
+		<footer class="full-width black footer">
+			<div class="wrapper">
+				<p>An <a href="http://avansera.com" target="_blank">Avansera Oy</a> product. Made in Helsinki | Copyright<small><sup>&copy;</sup></small> 2014</p>
+			</div>
+		</footer>
 
 
 
@@ -133,6 +140,29 @@
 			if(window.innerWidth > 768) {
 				$('.section').height(window.innerHeight);
 			}
+
+			$(window).scroll(function() {
+				var scrollTop = window.scrollY;
+				var elem01Top = Math.abs(document.getElementById('section01').getBoundingClientRect().top);
+				var elem02Top = Math.abs(document.getElementById('section02').getBoundingClientRect().top);
+				var elem03Top = Math.abs(document.getElementById('section03').getBoundingClientRect().top);
+
+				if(elem01Top < 500) {
+					$('#screen01').addClass('current');
+					$('#screen02').removeClass('current');
+					$('#screen03').removeClass('current');
+				} else if(elem02Top < 500) {
+					$('#screen02').addClass('current');
+					$('#screen01').removeClass('current');
+					$('#screen03').removeClass('current');
+				} else if(elem03Top < 500) {
+					$('#screen03').addClass('current');
+					$('#screen01').removeClass('current');
+					$('#screen02').removeClass('current');
+				}
+
+			});
+
 		</script>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
