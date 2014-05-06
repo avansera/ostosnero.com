@@ -20,6 +20,11 @@
 		background: $green;
 		color: $white;
 	}
+
+	&.black {
+		background: $black;
+		color: $white;
+	}
 }
 
 .above {
@@ -27,6 +32,16 @@
 	z-index: 3000;
 }
 
+
+.padded {
+	&.padded-desktop {
+		padding: 64px 0;
+	}
+
+	&.padded-thin {
+		padding: 16px 0;
+	}
+}
 
 @media screen and (max-width: $mobileBreak) {
 
