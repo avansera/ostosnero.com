@@ -32,8 +32,8 @@
 						<span class="hero_Content-Message">enhance your lifestyle, and your wallet, with an intelligent shopping list.</span>
 
 						<div class="hero_Content-Actions">
-							<a class="btn btn-pill btn-green" href="#">Secure your place</a>
-							<a class="btn btn-pill btn-t-white" href="#">Learn more</a>
+							<a class="btn btn-pill btn-green" href="#contact">Secure your place</a>
+							<a class="btn btn-pill btn-t-white" href="#section01">Learn more</a>
 						</div>
 					</section>
 				</div>
@@ -104,7 +104,7 @@
 			<img id="screen03" class="phone_Screen" src="images/phone-screen-dummy-03.png" alt=""/>
 		</div>
 
-		<section class="full-width padded green above contact">
+		<section id="contact" class="full-width padded green above contact">
 			<div class="row wrapper section">
 				<div class="column-12-hand section_Content">
 					<h2 class="section_Content-Title">Get notified when we launch</h2>
@@ -140,6 +140,21 @@
 			if(window.innerWidth > 768) {
 				$('.section').height(window.innerHeight);
 			}
+
+			$(function() {
+				$('a[href*=#]:not([href=#])').click(function() {
+					if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+						var target = $(this.hash);
+						target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+						if (target.length) {
+							$('html,body').animate({
+								scrollTop: target.offset().top
+							}, 500);
+							return false;
+						}
+					}
+				});
+			});
 
 			$(window).scroll(function() {
 				var scrollTop = window.scrollY;
