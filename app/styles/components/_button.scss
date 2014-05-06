@@ -24,6 +24,13 @@
 	-o-transition: 0.25s all ease-out;
 	transition: 0.25s all ease-out;
 
+
+	&:hover,
+	&:active,
+	&:focus {
+		color: inherit;
+	}
+
 	& + .btn {
 		margin: 1em 0 0;
 	}

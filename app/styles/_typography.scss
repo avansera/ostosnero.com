@@ -6,3 +6,15 @@ body {
 	font: 400 1.6rem/1.5 'Source Sans Pro';
 	color: $black;
 }
+
+a,
+a:link,
+a:visited {
+	color: inherit;
+}
+
+a:hover,
+a:active,
+a:focus {
+	color: $red;
+}
